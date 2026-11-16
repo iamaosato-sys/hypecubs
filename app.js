@@ -613,7 +613,7 @@ VIEWS.teach = () => {
 };
 VIEWS.teach2 = () => {
   const p = me(); const L = ladder(p, arg)[0];
-  return `<section class="post"><span class="crest">${art(arg, p.cr[arg].lv, 96)}</span><h1>Teach your grown-up: ${esc(moveText(p, L))}</h1>
+  return `<section class="post"><span class="crest">${art(arg, p.cr[arg].lv, 96)}</span><h1>Your turn to teach: ${esc(moveText(p, L))}</h1>
   <ol class="cue steps" style="text-align:left"><li>Show your grown-up how to do it.</li><li>Tell them the tip: <i>${esc(L.c)}</i></li><li>Watch them do it 3 times.</li><li>Give them stars!</li></ol></section>
   <h2 class="center">How did your grown-up do?</h2>
   <div class="faces">${[1, 2, 3].map((n) => `<button class="face" data-act="coach" data-n="${n}">${starsSvg(n)}${['Keep practising', 'Pretty good', 'Super'][n - 1]}</button>`).join('')}</div>`;
