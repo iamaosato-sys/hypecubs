@@ -1,0 +1,631 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-16T18:07:42Z",
+  "title": "Design System: HypeCubs",
+  "extensions": {
+    "colorMeta": {
+      "moss-ground": {
+        "role": "neutral",
+        "displayName": "Moss Ground",
+        "canonical": "#9fcd73",
+        "tonalRamp": [
+          "#26311c",
+          "#445c2d",
+          "#638c3b",
+          "#81bd48",
+          "#a0c67b",
+          "#bfd4aa",
+          "#dbe5d2",
+          "#f2f5ef"
+        ]
+      },
+      "map-field": {
+        "role": "neutral",
+        "displayName": "Map Field",
+        "canonical": "#94c463",
+        "tonalRamp": [
+          "#26301c",
+          "#455b2e",
+          "#648a3d",
+          "#83ba4a",
+          "#a1c57d",
+          "#bfd3ab",
+          "#dbe4d2",
+          "#f2f5f0"
+        ]
+      },
+      "forest-ink": {
+        "role": "neutral",
+        "displayName": "Forest Ink",
+        "canonical": "#12301d",
+        "tonalRamp": [
+          "#1c3024",
+          "#2e5c3f",
+          "#3c8b59",
+          "#4aba73",
+          "#7cc597",
+          "#abd4ba",
+          "#d2e5d9",
+          "#f0f5f2"
+        ]
+      },
+      "forest-ink-soft": {
+        "role": "neutral",
+        "displayName": "Forest Ink Soft",
+        "canonical": "#1f4329",
+        "tonalRamp": [
+          "#1e2e23",
+          "#33573d",
+          "#448355",
+          "#55af6e",
+          "#83be94",
+          "#afd0b8",
+          "#d4e3d8",
+          "#f0f4f1"
+        ]
+      },
+      "legend-sheet": {
+        "role": "neutral",
+        "displayName": "Legend Sheet",
+        "canonical": "#f3faea",
+        "tonalRamp": [
+          "#283419",
+          "#496426",
+          "#6a992e",
+          "#8cce36",
+          "#a7d270",
+          "#c3dba4",
+          "#dde8cf",
+          "#f3f6ef"
+        ]
+      },
+      "trail-orange": {
+        "role": "primary",
+        "displayName": "Trail Orange",
+        "canonical": "#ff7a1a",
+        "tonalRamp": [
+          "#3c2310",
+          "#773d13",
+          "#ba560d",
+          "#fe6e07",
+          "#f09451",
+          "#ecb893",
+          "#f0d8c7",
+          "#f8f1ec"
+        ]
+      },
+      "trail-orange-deep": {
+        "role": "primary",
+        "displayName": "Trail Orange Deep",
+        "canonical": "#e2590a",
+        "tonalRamp": [
+          "#3b2112",
+          "#723917",
+          "#b24e14",
+          "#f36411",
+          "#ea8d58",
+          "#e8b496",
+          "#eed6c9",
+          "#f8f1ed"
+        ]
+      },
+      "sign-yellow": {
+        "role": "secondary",
+        "displayName": "Sign Yellow",
+        "canonical": "#ffd23f",
+        "tonalRamp": [
+          "#3c3210",
+          "#775f13",
+          "#ba910d",
+          "#fec407",
+          "#f0cb51",
+          "#ecd793",
+          "#f0e6c7",
+          "#f8f5ec"
+        ]
+      },
+      "sign-cream": {
+        "role": "secondary",
+        "displayName": "Sign Cream",
+        "canonical": "#fff4c7",
+        "tonalRamp": [
+          "#3c3410",
+          "#776313",
+          "#ba980d",
+          "#fecd07",
+          "#f0d151",
+          "#ecda93",
+          "#f0e8c7",
+          "#f8f6ec"
+        ]
+      },
+      "timber": {
+        "role": "neutral",
+        "displayName": "Timber",
+        "canonical": "#7a4b2a",
+        "tonalRamp": [
+          "#31241b",
+          "#5d412d",
+          "#8e5c39",
+          "#be7846",
+          "#c79a7a",
+          "#d5bba9",
+          "#e5dad1",
+          "#f5f2ef"
+        ]
+      },
+      "timber-dark": {
+        "role": "neutral",
+        "displayName": "Timber Dark",
+        "canonical": "#5a3519",
+        "tonalRamp": [
+          "#33251a",
+          "#614129",
+          "#945d33",
+          "#c8783c",
+          "#ce9a74",
+          "#d8bca6",
+          "#e7dad0",
+          "#f6f2ef"
+        ]
+      },
+      "timber-light": {
+        "role": "neutral",
+        "displayName": "Timber Light",
+        "canonical": "#9a6339",
+        "tonalRamp": [
+          "#30251c",
+          "#5c422e",
+          "#8b5e3c",
+          "#bb7a49",
+          "#c59c7c",
+          "#d4bdab",
+          "#e5dad2",
+          "#f5f2f0"
+        ]
+      },
+      "cub-orange": {
+        "role": "tertiary",
+        "displayName": "Cub Orange",
+        "canonical": "#ff8a3d",
+        "tonalRamp": [
+          "#3c2210",
+          "#773b13",
+          "#ba520d",
+          "#fe6907",
+          "#f09051",
+          "#ecb693",
+          "#f0d7c7",
+          "#f8f1ec"
+        ]
+      },
+      "answer-go": {
+        "role": "tertiary",
+        "displayName": "Go Green",
+        "canonical": "#1f8a4c",
+        "tonalRamp": [
+          "#183424",
+          "#256440",
+          "#2d9a5b",
+          "#34d076",
+          "#6ed399",
+          "#a3dcbb",
+          "#cee8d9",
+          "#eff6f2"
+        ]
+      },
+      "answer-some": {
+        "role": "tertiary",
+        "displayName": "Some Blue",
+        "canonical": "#2459c9",
+        "tonalRamp": [
+          "#172136",
+          "#223868",
+          "#274ea0",
+          "#2c63d8",
+          "#698dd8",
+          "#a0b4de",
+          "#cdd6e9",
+          "#eef1f6"
+        ]
+      },
+      "answer-tricky": {
+        "role": "tertiary",
+        "displayName": "Tricky Pink",
+        "canonical": "#c8366f",
+        "tonalRamp": [
+          "#331923",
+          "#62283f",
+          "#953259",
+          "#c93b72",
+          "#ce7397",
+          "#d9a6ba",
+          "#e7d0d9",
+          "#f6eff2"
+        ]
+      },
+      "alert-wine": {
+        "role": "neutral",
+        "displayName": "Alert Wine",
+        "canonical": "#9c1c44",
+        "tonalRamp": [
+          "#361720",
+          "#682238",
+          "#a0274d",
+          "#d82c62",
+          "#d8698c",
+          "#dea0b4",
+          "#e9cdd6",
+          "#f6eef1"
+        ]
+      },
+      "alert-blush": {
+        "role": "neutral",
+        "displayName": "Alert Blush",
+        "canonical": "#ffe4ee",
+        "tonalRamp": [
+          "#3c1020",
+          "#771338",
+          "#ba0d4d",
+          "#fe0762",
+          "#f0518c",
+          "#ec93b4",
+          "#f0c7d6",
+          "#f8ecf1"
+        ]
+      },
+      "zone-bear-woods": {
+        "role": "tertiary",
+        "displayName": "Bear Woods",
+        "canonical": "#2c7a4a",
+        "tonalRamp": [
+          "#1c3124",
+          "#2d5c3f",
+          "#3b8c5a",
+          "#48bc75",
+          "#7bc698",
+          "#aad4ba",
+          "#d2e5d9",
+          "#eff5f2"
+        ]
+      },
+      "zone-monkey-canopy": {
+        "role": "tertiary",
+        "displayName": "Monkey Canopy",
+        "canonical": "#1f9e7a",
+        "tonalRamp": [
+          "#17352d",
+          "#236653",
+          "#299d7d",
+          "#2fd5a6",
+          "#6bd6b8",
+          "#a1ddcc",
+          "#cee9e1",
+          "#eef6f4"
+        ]
+      },
+      "zone-kangaroo-meadow": {
+        "role": "tertiary",
+        "displayName": "Kangaroo Meadow",
+        "canonical": "#e9b23a",
+        "tonalRamp": [
+          "#382d15",
+          "#6d541d",
+          "#a87d1e",
+          "#e5a71f",
+          "#e0b861",
+          "#e3cc9c",
+          "#ece1cb",
+          "#f7f4ee"
+        ]
+      },
+      "zone-crab-shore": {
+        "role": "tertiary",
+        "displayName": "Crab Shore",
+        "canonical": "#3fa7d6",
+        "tonalRamp": [
+          "#182c35",
+          "#255165",
+          "#2c799b",
+          "#32a0d2",
+          "#6db4d4",
+          "#a2cadc",
+          "#cee0e8",
+          "#eef4f6"
+        ]
+      },
+      "zone-flamingo-lake": {
+        "role": "tertiary",
+        "displayName": "Flamingo Lake",
+        "canonical": "#ff8fb8",
+        "tonalRamp": [
+          "#3c1020",
+          "#771337",
+          "#ba0d4c",
+          "#fe0761",
+          "#f0518b",
+          "#ec93b3",
+          "#f0c7d6",
+          "#f8ecf1"
+        ]
+      },
+      "zone-gorilla-ridge": {
+        "role": "tertiary",
+        "displayName": "Gorilla Ridge",
+        "canonical": "#7d7aa3",
+        "tonalRamp": [
+          "#23222a",
+          "#3d3c4e",
+          "#565473",
+          "#6f6c99",
+          "#9492af",
+          "#b8b7c7",
+          "#d8d8df",
+          "#f1f1f3"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display-hero": {
+        "displayName": "Display Hero",
+        "purpose": "Parent landing headline only."
+      },
+      "display": {
+        "displayName": "Display",
+        "purpose": "Screen titles and the move name on a trail post."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section headings."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Sub-section, codex and route entry names."
+      },
+      "sign": {
+        "displayName": "Sign",
+        "purpose": "Arrow-sign labels; routed lettering."
+      },
+      "counter": {
+        "displayName": "Counter",
+        "purpose": "Countdown timer on a trail post."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "All reading text, max 65ch."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Lexend semibold sub-lines, captions, status and marker captions."
+      }
+    },
+    "shadows": [
+      {
+        "name": "sheet-rest",
+        "value": "0 10px 22px -8px rgba(18,48,29,.35)",
+        "purpose": "Legend sheets."
+      },
+      {
+        "name": "map-frame",
+        "value": "0 14px 30px -10px rgba(18,48,29,.45)",
+        "purpose": "Framed forest map."
+      },
+      {
+        "name": "board",
+        "value": "0 16px 30px -12px rgba(40,22,8,.6)",
+        "purpose": "Trail posts and landing wood boards."
+      },
+      {
+        "name": "header-plank",
+        "value": "0 6px 14px rgba(40,22,8,.25)",
+        "purpose": "Sticky timber header."
+      },
+      {
+        "name": "routed-lip",
+        "value": "inset 0 -4px 0 #5a3519",
+        "purpose": "Bottom edge of every plank; inset 0 -2px 0 when pressed."
+      },
+      {
+        "name": "modal",
+        "value": "0 20px 40px rgba(0,0,0,.35)",
+        "purpose": "Modal box over rgba(12,32,19,.72) scrim."
+      },
+      {
+        "name": "you-are-here",
+        "value": "0 0 0 6px rgba(255,122,26,.3)",
+        "purpose": "Current trail marker halo, breathing to 11px."
+      }
+    ],
+    "motion": [
+      {
+        "name": "trail-draw",
+        "value": "1.6s cubic-bezier(.3,.7,.2,1) .2s",
+        "purpose": "Trail casing draws itself via stroke-dashoffset; dashes fade in at 1.6s over .4s."
+      },
+      {
+        "name": "post-pop",
+        "value": ".5s cubic-bezier(.16,1,.3,1)",
+        "purpose": "Map posts scale up from their base."
+      },
+      {
+        "name": "sign-press",
+        "value": ".15s cubic-bezier(.2,.8,.2,1)",
+        "purpose": "Sign hover slide and press."
+      },
+      {
+        "name": "toast-rise",
+        "value": ".35s cubic-bezier(.16,1,.3,1)",
+        "purpose": "Hype toast rising from the bottom."
+      },
+      {
+        "name": "flame-flicker",
+        "value": "1.3s ease-in-out infinite alternate",
+        "purpose": "Campfire flame."
+      },
+      {
+        "name": "here-breathe",
+        "value": "1.4s ease-in-out infinite",
+        "purpose": "You-are-here marker halo."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "prefers-reduced-motion: reduce",
+        "purpose": "All animation and transition off; trail rendered drawn, confetti hidden."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "xs",
+        "value": "400px"
+      },
+      {
+        "name": "landing-split",
+        "value": "860px"
+      },
+      {
+        "name": "app-split",
+        "value": "1024px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Arrow Sign (primary)",
+      "kind": "button",
+      "refersTo": "sign-primary",
+      "description": "The one forward action on a screen: START TRAIL, I did it!, Open HypeCubs.",
+      "html": "<button class=\"ds-sign\">Start trail <svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M4 12h15M13 6l6 6-6 6\"/></svg></button>",
+      "css": ".ds-sign { display:flex; align-items:center; justify-content:center; gap:10px; width:100%; max-width:420px; min-height:66px; padding:12px 46px 12px 22px; border:0; cursor:pointer; font:400 1.65rem/1 'Lilita One', 'Arial Rounded MT Bold', sans-serif; letter-spacing:.02em; color:#2a1100; background:#ff7a1a; clip-path: polygon(0 0, calc(100% - 30px) 0, 100% 50%, calc(100% - 30px) 100%, 0 100%); transition: transform .15s cubic-bezier(.2,.8,.2,1); } .ds-sign:hover { transform: translateX(4px); } .ds-sign:active { transform: translate(2px,3px); } .ds-sign:focus-visible { outline:4px solid #ff7a1a; outline-offset:3px; }"
+    },
+    {
+      "name": "Plank",
+      "kind": "button",
+      "refersTo": "plank",
+      "description": "Timber button with routed lip for secondary wayfinding actions.",
+      "html": "<button class=\"ds-plank\">Save profile</button>",
+      "css": ".ds-plank { display:inline-flex; align-items:center; gap:8px; min-height:50px; padding:10px 20px; border:0; border-radius:10px; cursor:pointer; font:400 1.15rem/1 'Lilita One', sans-serif; letter-spacing:.02em; color:#ffd23f; background:repeating-linear-gradient(90deg, rgba(0,0,0,.06) 0 2px, transparent 2px 9px, rgba(255,255,255,.05) 9px 10px, transparent 10px 17px), #7a4b2a; box-shadow: inset 0 -4px 0 #5a3519, 0 4px 10px rgba(40,22,8,.25); } .ds-plank:hover { background:repeating-linear-gradient(90deg, rgba(0,0,0,.06) 0 2px, transparent 2px 9px, rgba(255,255,255,.05) 9px 10px, transparent 10px 17px), #9a6339; } .ds-plank:active { transform: translateY(2px); box-shadow: inset 0 -2px 0 #5a3519; } .ds-plank:focus-visible { outline:4px solid #ff7a1a; outline-offset:3px; }"
+    },
+    {
+      "name": "Ghost Plank",
+      "kind": "button",
+      "refersTo": "plank-ghost",
+      "description": "Secondary action on a legend sheet.",
+      "html": "<button class=\"ds-plank-ghost\">Not now</button>",
+      "css": ".ds-plank-ghost { min-height:50px; padding:10px 20px; border:0; border-radius:10px; cursor:pointer; font:400 1.15rem/1 'Lilita One', sans-serif; letter-spacing:.02em; color:#12301d; background:transparent; box-shadow: inset 0 0 0 3px #12301d; } .ds-plank-ghost:hover { background: rgba(18,48,29,.08); } .ds-plank-ghost:focus-visible { outline:4px solid #ff7a1a; outline-offset:3px; }"
+    },
+    {
+      "name": "Header Nav",
+      "kind": "nav",
+      "refersTo": "nav-item",
+      "description": "Sticky timber header with plank nav items; current page in Sign Yellow.",
+      "html": "<header class=\"ds-top\"><span class=\"ds-brand\">HypeCubs</span><nav class=\"ds-nav\"><a class=\"ds-navi\" aria-current=\"page\" href=\"#\">Map</a><a class=\"ds-navi\" href=\"#\">Creatures</a><a class=\"ds-navi\" href=\"#\">Grown-ups</a></nav></header>",
+      "css": ".ds-top { display:flex; flex-wrap:wrap; gap:6px 12px; align-items:center; justify-content:space-between; padding:8px 14px; background-color:#7a4b2a; background-image:repeating-linear-gradient(90deg, rgba(0,0,0,.06) 0 2px, transparent 2px 9px, rgba(255,255,255,.05) 9px 10px, transparent 10px 17px), linear-gradient(#9a6339,#7a4b2a); border-bottom:4px solid #5a3519; } .ds-brand { font:400 1.55rem/1 'Lilita One', sans-serif; color:#ffd23f; text-shadow:0 2px 0 #5a3519; } .ds-nav { display:flex; gap:6px; } .ds-navi { display:inline-flex; align-items:center; min-height:46px; padding:8px 14px; border-radius:10px; background:rgba(0,0,0,.18); color:#fff4c7; font:400 1.02rem/1 'Lilita One', sans-serif; letter-spacing:.02em; text-decoration:none; } .ds-navi:hover { background:rgba(0,0,0,.3); } .ds-navi[aria-current=page] { background:#ffd23f; color:#12301d; } .ds-navi:focus-visible { outline:4px solid #ff7a1a; outline-offset:3px; }"
+    },
+    {
+      "name": "Profile Chip",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Pill for choosing who is walking the trail.",
+      "html": "<div style=\"display:flex;gap:8px\"><button class=\"ds-chip ds-on\">Rocket</button><button class=\"ds-chip\">Maya</button></div>",
+      "css": ".ds-chip { min-height:46px; padding:6px 16px; border:3px solid #12301d; border-radius:999px; background:#f3faea; color:#12301d; cursor:pointer; font:400 1.05rem 'Lilita One', sans-serif; } .ds-chip.ds-on { background:#ff7a1a; } .ds-chip:focus-visible { outline:4px solid #ff7a1a; outline-offset:3px; }"
+    },
+    {
+      "name": "Legend Sheet",
+      "kind": "card",
+      "refersTo": "legend-sheet",
+      "description": "Map-legend reading panel edged in forest ink.",
+      "html": "<section class=\"ds-sheet\"><h3>Safety and privacy</h3><p>Nothing leaves the device. No account, no ads, no analytics on any children's screen.</p></section>",
+      "css": ".ds-sheet { background:#f3faea; border:3px solid #12301d; border-radius:16px; padding:18px; color:#12301d; font:400 17px/1.55 Lexend, system-ui, sans-serif; box-shadow:0 10px 22px -8px rgba(18,48,29,.35); } .ds-sheet h3 { font:400 1.25rem 'Lilita One', sans-serif; margin:0 0 6px; } .ds-sheet p { margin:0; }"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Ink-bordered input used in setup and grown-ups forms.",
+      "html": "<label class=\"ds-label\">Trail name<input class=\"ds-input\" placeholder=\"e.g. Rocket\"></label>",
+      "css": ".ds-label { display:block; font:700 17px Lexend, system-ui, sans-serif; color:#12301d; } .ds-input { display:block; width:100%; margin-top:6px; min-height:52px; padding:12px 14px; border:3px solid #12301d; border-radius:12px; background:#fff; color:#12301d; font:500 1.05rem Lexend, system-ui, sans-serif; } .ds-input::placeholder { color:#5f7a66; } .ds-input:focus-visible { outline:4px solid #ff7a1a; outline-offset:3px; }"
+    },
+    {
+      "name": "Trail Post",
+      "kind": "custom",
+      "refersTo": "trail-post",
+      "description": "Mission screen: timber post with creature crest, move, target plate and the primary sign.",
+      "html": "<section class=\"ds-post\"><span class=\"ds-crest\"><svg viewBox=\"0 0 100 100\" width=\"84\" height=\"84\" aria-hidden=\"true\"><circle cx=\"50\" cy=\"50\" r=\"45\" fill=\"#2c7a4a\" stroke=\"#12301d\" stroke-width=\"3\"/><circle cx=\"50\" cy=\"50\" r=\"39\" fill=\"none\" stroke=\"#ffd23f\" stroke-width=\"5\"/><circle cx=\"50\" cy=\"53\" r=\"22\" fill=\"#a0673a\"/><circle cx=\"43\" cy=\"49\" r=\"3.5\" fill=\"#12301d\"/><circle cx=\"57\" cy=\"49\" r=\"3.5\" fill=\"#12301d\"/></svg></span><h2 class=\"ds-post-title\">Bear crawl</h2><p class=\"ds-cue\">Knees hovering, crawl forward.</p><span class=\"ds-target\">Do 5 steps</span></section>",
+      "css": ".ds-post { position:relative; margin:50px auto 10px; max-width:520px; padding:56px 20px 22px; border-radius:18px; text-align:center; color:#fff8e3; background-color:#7a4b2a; background-image:repeating-linear-gradient(90deg, rgba(0,0,0,.06) 0 2px, transparent 2px 9px, rgba(255,255,255,.05) 9px 10px, transparent 10px 17px), linear-gradient(90deg,#5a3519,#7a4b2a 18%,#9a6339 55%,#7a4b2a 85%,#5a3519); box-shadow: inset 0 -6px 0 rgba(0,0,0,.2), 0 16px 30px -12px rgba(40,22,8,.6); font:400 17px/1.55 Lexend, system-ui, sans-serif; } .ds-crest { position:absolute; left:50%; top:-42px; transform:translateX(-50%); } .ds-post-title { font:400 2.4rem/1.02 'Lilita One', sans-serif; color:#ffd23f; text-shadow:0 3px 0 #5a3519; margin:6px 0; } .ds-cue { font-size:1.12rem; margin:0 auto 12px; max-width:40ch; } .ds-target { display:inline-block; font:400 2rem/1.05 'Lilita One', sans-serif; color:#12301d; background:#ffd23f; padding:10px 18px; border-radius:12px; box-shadow: inset 0 -4px 0 rgba(0,0,0,.15); }"
+    },
+    {
+      "name": "Trail Marker Row",
+      "kind": "custom",
+      "description": "Rounds as one dashed orange line with a breathing you-are-here marker and a word caption.",
+      "html": "<div><div class=\"ds-markers\"><b class=\"ds-now\"></b><i></i><b></b><i></i><b></b></div><p class=\"ds-mcap\">Post 1 of 3 \u00b7 round 1 of 2</p></div>",
+      "css": ".ds-markers { display:flex; align-items:center; max-width:360px; margin:0 auto; } .ds-markers i { flex:1 1 0; height:6px; background:repeating-linear-gradient(90deg,#ff7a1a 0 10px,transparent 10px 16px); } .ds-markers b { flex:0 0 auto; width:22px; height:22px; border-radius:50%; background:#f3faea; border:3px solid #12301d; } .ds-markers b.ds-now { width:30px; height:30px; background:#ff7a1a; box-shadow:0 0 0 6px rgba(255,122,26,.3); animation: ds-here 1.4s ease-in-out infinite; } @keyframes ds-here { 50% { box-shadow:0 0 0 11px rgba(255,122,26,.12); } } @media (prefers-reduced-motion: reduce) { .ds-markers b.ds-now { animation:none; } } .ds-mcap { text-align:center; font:600 .9rem Lexend, system-ui, sans-serif; color:#1f4329; margin:8px 0 0; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Waymarked Trail",
+    "overview": "Every screen is a stretch of trail through a hand-drawn forest map. The ground is moss green carrying topographic contour lines; wayfinding is built from the things you find on a real waymarked walk: an orange dashed trail, circular waymarker discs, routed timber posts, and arrow-ended plank signs with yellow routed lettering. Reading matter sits on pale map-legend sheets edged in forest ink. Nothing floats on a gradient and nothing is a generic rounded card; every container is either a piece of timber, a legend sheet, or the map itself.\n\nThe density is low and the targets are large, because the app is read from a distance by a child who is mid-movement. Type does the shouting (Lilita One, set like routed sign lettering) while Lexend carries the reading. Colour has a job: orange means \"go this way\", yellow lettering means \"this is a sign\", each creature lives in its own zone colour, and forest ink holds every edge. The world is the same on the parent landing page; there the map is the hero and the trailhead sign is the primary action.\n\nMotion belongs to the trail: the path draws itself, posts pop up from their base, the campfire flickers, and the \"you are here\" marker breathes. All of it stops under reduced motion, where the trail renders fully drawn.",
+    "keyCharacteristics": [
+      "Moss map ground with irregular contour lines, never a flat or gradient background.",
+      "Timber (wood grain plus a routed lip) for every wayfinding control; legend sheets for every block of reading.",
+      "Arrow-ended signs point the way forward; back signs point left.",
+      "Six fixed creature zone colours, used for zones, discs and nothing else.",
+      "Original, code-authored SVG only: discs, map, Cub, icons, faces.",
+      "Big targets (46px minimum, 64\u2013104px for primary trail controls)."
+    ],
+    "rules": [
+      {
+        "name": "The Orange Means Go Rule",
+        "body": "Trail Orange is reserved for the route and the next action. A decorative orange fill elsewhere dilutes the one signal a child follows.",
+        "section": "colors"
+      },
+      {
+        "name": "The Zone Belongs to the Creature Rule",
+        "body": "Zone colours appear only on a creature's zone and disc. They never become general UI accents, and a creature never appears on another creature's colour.",
+        "section": "colors"
+      },
+      {
+        "name": "The Never Colour Alone Rule",
+        "body": "Every colour-coded meaning also carries a word, a shape or a position: answer signs have labels, stars have an aria label, markers have a \"Post 1 of 3 \u00b7 round 1 of 2\" caption.",
+        "section": "colors"
+      },
+      {
+        "name": "The Lettering Is Routed Rule",
+        "body": "Display text is always Lilita One at weight 400 in sentence or title case with a slight positive tracking (0.005\u20130.02em). No uppercase transforms, no faux bold.",
+        "section": "typography"
+      },
+      {
+        "name": "The Two Voices Rule",
+        "body": "Lilita One labels and names things; Lexend explains them. A paragraph is never set in Lilita One.",
+        "section": "typography"
+      },
+      {
+        "name": "The Lying Flat Rule",
+        "body": "Shadows always fall downward and stay soft and short. Nothing glows, and no surface floats higher than a modal.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Point the Way Rule",
+        "body": "Only controls that move the child somewhere take the arrow silhouette. A setting, a toggle or a reading panel is never an arrow.",
+        "section": "shapes"
+      }
+    ],
+    "dos": [
+      "Do put every screen on the moss ground with contour lines, and frame the forest map with a 4px forest-ink border at 22px radius.",
+      "Do use the arrow sign for the one forward action on a screen, in Trail Orange, full width, at least 66px tall.",
+      "Do set wayfinding labels in Lilita One Sign Yellow on timber, and reading text in Lexend on a legend sheet.",
+      "Do keep every tap target at 46px or more, and primary trail controls at 64px or more.",
+      "Do give every colour-coded state a word or shape as well (answer labels, star aria labels, marker captions).",
+      "Do draw any new art as original SVG in code, outlined in forest ink, in the same flat-fill style as the discs and the Cub.",
+      "Do stop all trail motion under `prefers-reduced-motion` and show the end state (trail drawn, dashes visible, no confetti)."
+    ],
+    "donts": [
+      "Don't build screens from rounded cards on a gradient; containers are timber, legend sheets or the map.",
+      "Don't use a zone colour for anything except its own creature's zone and disc.",
+      "Don't use Trail Orange as decoration; it is the route and the next action.",
+      "Don't add emoji or icon-font icons; icons are the drawn 2.5px-stroke set.",
+      "Don't add stock or AI-generated raster images; every shipping image is SVG authored in `app.js` (exported to `img/*.svg`).",
+      "Don't set display text in uppercase or in a system face; Lilita One at 400 only.",
+      "Don't show points shops, streak counters, leaderboards or anything that can go down; visible progress only grows."
+    ]
+  }
+}
