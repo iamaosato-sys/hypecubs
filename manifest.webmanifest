@@ -1,0 +1,13 @@
+{
+  "name": "HypeCubs: movement quests for kids",
+  "short_name": "HypeCubs",
+  "description": "Short movement quests for children aged 6–11. Collect and evolve six animal creatures by practising real skills.",
+  "start_url": "./app.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#141a33",
+  "theme_color": "#141a33",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}
