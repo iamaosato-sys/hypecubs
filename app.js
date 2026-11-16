@@ -499,6 +499,14 @@ function modal(html) {
   const b = document.getElementById('mClose'); b.focus(); b.onclick = () => { $modal.hidden = true; };
 }
 
+function askConfirm(msg, yes, then) {
+  $modal.innerHTML = '<div class="box"><h2 id="modalTitle">Are you sure?</h2><p>' + esc(msg) + '</p><div class="tools"><button class="dangerbtn" id="cYes">' + esc(yes) + '</button><button id="cNo">Cancel</button></div></div>';
+  $modal.hidden = false;
+  document.getElementById('cNo').focus();
+  document.getElementById('cNo').onclick = () => { $modal.hidden = true; };
+  document.getElementById('cYes').onclick = () => { $modal.hidden = true; then(); };
+}
+
 /* ---------- Timers ---------- */
 function stopTimer() { if (T) { clearInterval(T); T = null; } }
 function countdown(el, secs, onDone, onTick) {
@@ -665,10 +673,11 @@ document.addEventListener('click', (e) => {
     }
     case 'delProfile': {
       const x = S.profiles.find((y) => y.id === t.dataset.id);
-      if (!confirm('Remove ' + nameOf(x) + '\'s profile and all their progress? This can\'t be undone.')) return;
-      S.profiles = S.profiles.filter((y) => y.id !== t.dataset.id);
-      if (!S.profiles.length) { S = blank(); save(); return go('setup1'); }
-      S.active = S.profiles[0].id; save(); render(); break;
+      askConfirm('Remove ' + nameOf(x) + '\'s profile and all their progress? This can\'t be undone.', 'Remove', () => {
+        S.profiles = S.profiles.filter((y) => y.id !== x.id);
+        if (!S.profiles.length) { S = blank(); save(); return go('setup1'); }
+        S.active = S.profiles[0].id; save(); render();
+      }); break;
     }
     case 'saveLevels': {
       const x = S.profiles.find((y) => y.id === arg);
@@ -684,9 +693,10 @@ document.addEventListener('click', (e) => {
       document.body.appendChild(a); a.click(); a.remove(); break;
     }
     case 'wipe': {
-      if (!confirm('Delete ALL HypeCubs data on this device, for every child? This can\'t be undone.')) return;
-      try { localStorage.removeItem(KEY); } catch (err) {}
-      S = blank(); go('setup1'); break;
+      askConfirm('Delete ALL HypeCubs data on this device, for every child? This can\'t be undone.', 'Delete everything', () => {
+        try { localStorage.removeItem(KEY); } catch (err) {}
+        S = blank(); go('setup1');
+      }); break;
     }
   }
 });
@@ -697,8 +707,8 @@ document.addEventListener('change', (e) => {
     try {
       const d = JSON.parse(r.result);
       if (!d || d.v !== 1 || !Array.isArray(d.profiles)) throw new Error('bad');
-      S = d; save(); alert('Backup imported.'); go('home');
-    } catch (err) { alert('That file doesn\'t look like a HypeCubs backup.'); }
+      S = d; save(); go('home'); modal('<h2 id="modalTitle">Backup imported</h2>');
+    } catch (err) { modal('<h2 id="modalTitle">That file doesn\'t look like a HypeCubs backup.</h2>'); }
   };
   r.readAsText(e.target.files[0]);
 });
