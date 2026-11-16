@@ -1,0 +1,97 @@
+{
+  "title": "Choose the HypeCubs visual world",
+  "question": "The roll dealt Waymarked Trail. Keep it, take an alternate, or re-roll.",
+  "options": [
+    {
+      "id": "assigned", "kind": "assigned", "label": "Waymarked Trail", "kicker": "THE ROLL",
+      "lineage": "UK forest-park trail maps and coloured waymarker posts",
+      "thesis": "Every quest is a walk on a waymarked trail: coloured route discs, numbered timber posts, and a map of The Lost Forest that fills in as you move.",
+      "palette": ["#1f6b45", "#ff7a1a", "#2f6fe0", "#ffd23f", "#5a3a22", "#bfe3a0"],
+      "materials": ["printed trail map with contour lines", "routed timber posts", "painted waymarker discs"],
+      "viewport": "Home is the forest map: six creature zones, today's trail drawn in orange with three numbered posts (the creatures), and a chunky trailhead sign holding START TRAIL. Mission screens are the post you're standing at, with the move routed into the timber.",
+      "risk": "Can tip into geography homework if drawn as a flat schematic; it has to stay chunky, illustrated and loud.",
+      "raised": [
+        {"from": "brand-identity-canon-art-paul-magazine-program", "raise": "A small hidden Cub on every screen, waiting to be spotted. Found Cubs join My Firsts."},
+        {"from": "signals-instruments-drum-machine-step-row", "raise": "Rounds become an unbroken row of trail markers with a 'you are here' light moving along it. An empty row is an invitation, never a failure."},
+        {"from": "dream-surreal-impossible-worlds-sleeping-city-fold", "raise": "Each creature owns a map zone in its own colour (Bear Woods, Monkey Canopy, Kangaroo Meadow, Crab Shore, Flamingo Lake, Gorilla Ridge), so the whole map tells you who you've trained."}
+      ]
+    },
+    {
+      "id": "model-pick", "kind": "pick", "label": "Playground Markings", "kicker": "IMPECCABLE’S PICK",
+      "lineage": "thermoplastic markings painted on UK primary-school playgrounds",
+      "thesis": "The app is the playground floor: hopscotch grids, number snakes and compass roses in thick primary paint on dark tarmac, the surface every 6–11 year old already plays on.",
+      "palette": ["#33363b", "#ffd400", "#e63323", "#1e5bd8", "#2bb24c", "#ffffff"],
+      "materials": ["thermoplastic road paint", "tarmac grit", "stencilled numerals"],
+      "viewport": "A hopscotch ladder runs up the screen: each square a creature level, today's quest squares glowing in yellow paint, the Cub sat on the next square. The start button is a painted target circle.",
+      "risk": "My top pick, and the most obvious kids' world. A grey tarmac ground can feel dull unless the paint covers a lot of the screen."
+    },
+    {
+      "id": "challenger-multiplane", "kind": "challenger", "catalogId": "cinema-cinematography-editing-multiplane-cel-dawn",
+      "label": "Multiplane Forest Dawn", "verdict": "competitive",
+      "lineage": "hand-painted multiplane cel animation",
+      "thesis": "The Lost Forest as layered painted planes that slide past as the story moves, the campfire as the one warm light.",
+      "palette": ["#2d4a2b", "#6f8f6a", "#9fb3b8", "#3b2a1e", "#ffb347"],
+      "materials": ["gouache forest planes", "mist", "cel overlays"],
+      "viewport": "A deep forest scene in four layers; the quest card sits on the nearest plane and the camera drifts toward the campfire.",
+      "case": "Kids love a storybook forest and it fits the story, but painted layers are heavy to make with free tools, and a moody scene is harder to read at a glance mid-exercise.",
+      "risk": "Can look sleepy and grown-up, not energetic.",
+      "hero": "https://impeccable.style/worlds/cards/cinema-cinematography-editing-multiplane-cel-dawn-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/cinema-cinematography-editing-multiplane-cel-dawn.webp"
+    },
+    {
+      "id": "challenger-drum", "kind": "challenger", "catalogId": "signals-instruments-drum-machine-step-row",
+      "label": "Drum Machine Step Row", "verdict": "declined",
+      "lineage": "early-80s rhythm machines", "palette": ["#2b2b2e", "#e8452c", "#ff9a1f", "#ffd23f"],
+      "materials": ["candy step keys", "LEDs"],
+      "case": "Children don't recognise drum machines, and it reads as a music app.",
+      "kept": "Rounds as one unbroken row of markers with a moving light.",
+      "hero": "https://impeccable.style/worlds/cards/signals-instruments-drum-machine-step-row-hero.webp"
+    },
+    {
+      "id": "challenger-artpaul", "kind": "challenger", "catalogId": "brand-identity-canon-art-paul-magazine-program",
+      "label": "Mid-century Magazine", "verdict": "declined",
+      "lineage": "1950s magazine identity", "palette": ["#111111", "#ffffff", "#e8452c"],
+      "materials": ["coated stock", "serif grid"],
+      "case": "A grown-up editorial world; kids wouldn't see themselves in it.",
+      "kept": "A hidden mark on every screen for patient eyes to find.",
+      "hero": "https://impeccable.style/worlds/cards/brand-identity-canon-art-paul-magazine-program-hero.webp"
+    },
+    {
+      "id": "challenger-city", "kind": "challenger", "catalogId": "dream-surreal-impossible-worlds-sleeping-city-fold",
+      "label": "Sleeping City Fold", "verdict": "declined",
+      "lineage": "surreal night-time city", "palette": ["#141a3a", "#ffd56b", "#f2efe6"],
+      "materials": ["quilted map", "embroidered lights"],
+      "case": "A night-time, sleepy world works against an energetic movement app.",
+      "kept": "Every region keeps its own colour, so the map shows who's been trained.",
+      "hero": "https://impeccable.style/worlds/cards/dream-surreal-impossible-worlds-sleeping-city-fold-hero.webp"
+    },
+    {
+      "id": "challenger-deco", "kind": "challenger", "catalogId": "design-canon-deco-cinema-lobby",
+      "label": "Deco Cinema Lobby", "verdict": "declined",
+      "lineage": "1930s cinema lobbies", "palette": ["#121010", "#c9a24a", "#9e1b2f"],
+      "materials": ["brass", "lacquer"],
+      "case": "Glamour for grown-ups, nothing a child plays in.",
+      "kept": "Each step forward feels like arriving somewhere new.",
+      "hero": "https://impeccable.style/worlds/cards/design-canon-deco-cinema-lobby-hero.webp"
+    },
+    {
+      "id": "challenger-algorave", "kind": "challenger", "catalogId": "medium-native-algorave-source-floor",
+      "label": "Algorave Floor", "verdict": "declined",
+      "lineage": "live-coded club nights", "palette": ["#050505", "#39ff88", "#ff3cac"],
+      "materials": ["projected code"],
+      "case": "Neon-on-black is exactly the generic look you ruled out.",
+      "kept": "Show what's coming next before it happens.",
+      "hero": "https://impeccable.style/worlds/cards/medium-native-algorave-source-floor-hero.webp"
+    }
+  ],
+  "reroll": {"registers": ["safer", "bolder"]},
+  "canon": true,
+  "canonCard": {
+    "kind": "canon", "label": "The category standard",
+    "thesis": "A bright, friendly kids' fitness app done really well: white screens, rounded cards, one strong primary colour and a mascot.",
+    "palette": ["#ffffff", "#1d2a4d", "#2b7cff", "#ffc93c"],
+    "materials": ["rounded cards", "flat illustration"],
+    "viewport": "A mascot greeting, a big start button, and a row of creature cards.",
+    "risk": "Looks like every kids' app, the generic feel you wanted to avoid."
+  }
+}

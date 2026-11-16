@@ -203,3 +203,13 @@ const PARK_MOVES = {
   line: ['Flamingo walk: heel-to-toe along the line and back', 'Stand on one leg on the line for 10 seconds each side'],
   grass: ['Bear crawl 10 steps, then crab walk 10 steps', 'Kangaroo bounds: 5 big jumps', 'Roly-poly rolls or log rolls: 3']
 };
+
+/* ---------- Map zones (Waymarked Trail world) ---------- */
+const ZONES = {
+  gorilla: { name: 'Gorilla Ridge', colour: '#7d7aa3', x: 96, y: 96 },
+  monkey: { name: 'Monkey Canopy', colour: '#1f9e7a', x: 266, y: 100 },
+  flamingo: { name: 'Flamingo Lake', colour: '#ff8fb8', x: 84, y: 236 },
+  crab: { name: 'Crab Shore', colour: '#3fa7d6', x: 284, y: 240 },
+  bear: { name: 'Bear Woods', colour: '#2c7a4a', x: 92, y: 360 },
+  kangaroo: { name: 'Kangaroo Meadow', colour: '#e9b23a', x: 268, y: 358 }
+};

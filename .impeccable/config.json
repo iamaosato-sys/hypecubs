@@ -1,0 +1,35 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "organic-clip-path",
+        "value": "*",
+        "files": [
+          "*.html"
+        ],
+        "createdAt": "2026-11-16T17:56:11.766Z",
+        "reason": "Claude: the only 10-vertex polygon is the 5-point star for stage stars (geometry, not an organic contour)"
+      },
+      {
+        "rule": "repeating-stripes-gradient",
+        "value": "*",
+        "files": [
+          "*.html"
+        ],
+        "createdAt": "2026-11-16T17:56:11.773Z",
+        "reason": "Claude: wood grain on timber signs and dashed trail markers are the chosen Waymarked Trail world's materials (direction contract, user picked this world)"
+      },
+      {
+        "rule": "side-tab",
+        "value": "*",
+        "files": [
+          "styles.css"
+        ],
+        "createdAt": "2026-11-16T17:56:11.781Z",
+        "reason": "Claude: the bottom inset is the routed-timber lip shared by every plank, not a side accent"
+      }
+    ]
+  }
+}

@@ -1,6 +1,6 @@
-const CACHE = 'hypecubs-v1';
+const CACHE = 'hypecubs-v2';
 const FILES = ['./', 'index.html', 'app.html', 'styles.css', 'data.js', 'app.js', 'consent.js', 'icon.svg', 'manifest.webmanifest',
-  'terms.html', 'privacy.html', 'cookies.html', 'img/cub.svg'];
+  'terms.html', 'privacy.html', 'cookies.html', 'img/cub.svg', 'fonts/lilita-one-latin-400-normal.woff2', 'fonts/lexend-latin-wght-normal.woff2'];
 
 self.addEventListener('install', (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(FILES)).then(() => self.skipWaiting()));
