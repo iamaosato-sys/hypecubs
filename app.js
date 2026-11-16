@@ -259,14 +259,32 @@ function smoothPath(pts) {
   }
   return d;
 }
+
+/* Irregular, nested topographic contours: drawn once per map, never tiled. */
+const CONTOURS = (() => {
+  const ring = (cx, cy, rx, ry, k, seed) => {
+    let d = '';
+    for (let i = 0; i <= 24; i++) {
+      const t = (i / 24) * Math.PI * 2;
+      const w = 1 + 0.12 * Math.sin(3 * t + seed) + 0.07 * Math.sin(5 * t + seed * 2);
+      const x = cx + Math.cos(t) * rx * k * w, y = cy + Math.sin(t) * ry * k * w;
+      d += (i ? ' L' : 'M') + x.toFixed(1) + ' ' + y.toFixed(1);
+    }
+    return '<path d="' + d + 'Z"/>';
+  };
+  let g = '<g fill="none" stroke="#8fc067" stroke-width="1.6" stroke-linejoin="round">';
+  [[60, 150, 70, 46, 1.3], [300, 160, 60, 40, 2.1], [180, 330, 90, 50, 0.7], [180, 40, 120, 34, 2.9], [40, 300, 46, 70, 1.9], [330, 330, 40, 60, 0.4]].forEach((h) => {
+    for (let k = 1; k >= 0.35; k -= 0.22) g += ring(h[0], h[1], h[2], h[3], k, h[4]);
+  });
+  return g + '</g>';
+})();
 /* trail: creature ids to route (in order); opts: { draw, sleeping, label } */
 function forestMap(p, trail, opts) {
   opts = opts || {};
   const lv = (id) => (p && p.cr ? p.cr[id].lv : 0);
   const logs = p ? p.logs : 0;
   let s = '<svg class="map" viewBox="0 0 360 470" role="img" aria-label="' + esc(opts.label || 'Map of The Lost Forest') + '">';
-  s += '<defs><pattern id="ct" width="60" height="60" patternUnits="userSpaceOnUse"><path d="M-5 20 q20 -12 35 0 t35 0 M-5 48 q20 -10 35 0 t35 0" stroke="#a9d385" stroke-width="1.6" fill="none"/></pattern></defs>';
-  s += '<rect width="360" height="470" fill="#c3e39e"/><rect width="360" height="470" fill="url(#ct)"/>';
+  s += '<rect width="360" height="470" fill="#a9d47e"/>' + CONTOURS;
   CREATURE_IDS.forEach((id) => { s += zoneShape(id, ZONES[id], Math.min(1, 0.74 + lv(id) * 0.065)); });
   // campfire clearing
   const fl = logs >= 40 ? 5 : logs >= 25 ? 4 : logs >= 15 ? 3 : logs >= 8 ? 2 : logs >= 3 ? 1 : 0;
@@ -328,6 +346,8 @@ function render() {
   if (!S.setup || !S.profiles.length) { if (!view.startsWith('setup')) view = 'setup1'; }
   const fn = VIEWS[view] || VIEWS.home;
   $main.innerHTML = fn();
+  $main.dataset.view = view;
+  document.body.toggleAttribute('data-trail', NO_NAV.includes(view) || ['wiggle', 'teach2', 'parkQuest'].includes(view));
   document.querySelectorAll('.nav').forEach((b) => b.setAttribute('aria-current', b.dataset.view === view ? 'page' : 'false'));
   document.querySelector('.top nav').hidden = !S.setup || NO_NAV.includes(view);
   hideCub();
@@ -429,21 +449,22 @@ VIEWS.home = () => {
   const teach = CREATURE_IDS.some((id) => p.cr[id].lv >= 2);
   const ch = STORY[p.ch % STORY.length];
   const trail = done ? [] : paths(p)[0];
-  return `${others}
+  return `${others}<div class="home-cols"><div class="home-main">
   <h1>${done ? 'Trail done for today!' : 'Hi ' + esc(nameOf(p)) + '!'}</h1>
   <p class="sub">${done ? 'Your cub is resting by the fire. Muscles grow stronger while they rest.' : 'Chapter ' + (p.ch % STORY.length + 1) + ': ' + esc(ch.title)}</p>
   <div class="mapwrap">${forestMap(p, trail, { draw: !done, sleeping: done, label: done ? 'Your forest map. Your cub is asleep by the campfire.' : 'Your forest map. Today\'s trail visits ' + trail.map((id) => CREATURES[id].name).join(', ') })}</div>
   ${done ? `<button class="sign" data-act="go" data-v="wiggle">2-minute Wiggle Break ${icon('arrow', 26)}</button>`
     : `<button class="sign" data-act="go" data-v="questPick">Start trail ${icon('arrow', 26)}</button>`}
   <p class="status"><span><b>${p.logs}</b> ${p.logs === 1 ? 'log' : 'logs'} on the fire</span><span><b>${p.brave}</b> Brave ${p.brave === 1 ? 'Try' : 'Tries'}</span><span><b>${p.cubs || 0}</b> hidden cubs found</span></p>
+  </div>
   <nav class="fingerpost" aria-label="More to do">
     <button class="finger" data-act="go" data-v="codex">${icon('map', 26)}<span>Creatures</span></button>
     <button class="finger" data-act="go" data-v="park"><span>Playground Quest</span>${icon('slide', 26)}</button>
     <button class="finger" data-act="go" data-v="wiggle">${icon('wiggle', 26)}<span>Wiggle Break</span></button>
-    <button class="finger ${teach ? '' : 'locked'}" data-act="go" data-v="teach"><span>Teach a Grown-Up${teach ? '' : '<small>Opens at Ranger</small>'}</span>${icon('whistle', 26)}</button>
+    <button class="finger ${teach ? '' : 'locked'}" data-act="go" data-v="teach"><span>Be the Coach${teach ? '' : '<small>Opens at Ranger</small>'}</span>${icon('whistle', 26)}</button>
     <button class="finger" data-act="go" data-v="story">${icon('book', 26)}<span>Story so far</span></button>
     <button class="finger" data-act="go" data-v="firsts"><span>My trail log</span>${icon('star', 26)}</button>
-  </nav>`;
+  </nav></div>`;
 };
 
 /* Quest: choose a fork */
@@ -473,9 +494,9 @@ VIEWS.quest = () => {
   return `${markers()}<p class="markers-label">Post ${Q.i + 1} of ${Q.list.length} · round ${Q.round} of ${rounds(p)}</p>
   <section class="post">
     <span class="crest">${art(id, p.cr[id].lv, 96)}</span>
+    <h1>${esc(moveText(p, L))}</h1>
     <p class="who-line">${CREATURES[id].name} · ${STAGES[p.cr[id].lv]} ${stars(p.cr[id].lv)}</p>
     ${cur.practice ? '<span class="pill">Practice version</span>' : ''}
-    <h1>${esc(moveText(p, L))}</h1>
     ${p.quiet && L.quiet ? '' : `<p class="cue">${esc(L.c)}</p>`}
     <p class="target">${targetText(L, cur.t)}</p>
     ${L.u === 's' ? `<button class="sign" data-act="hold" data-t="${cur.t}" data-each="${L.each ? 1 : 0}">${icon('timer', 26)} Start the timer</button>`
@@ -515,8 +536,8 @@ VIEWS.brave = () => {
   const id = Q.list[Q.i];
   const L = ladder(p, id)[p.cr[id].lv + 1];
   return `<section class="post"><span class="crest">${art(id, p.cr[id].lv + 1, 96)}</span>
-  <p class="who-line">Brave Try · a ${STAGES[p.cr[id].lv + 1]} move</p>
-  <h1>${esc(moveText(p, L))}</h1>${p.quiet && L.quiet ? '' : `<p class="cue">${esc(L.c)}</p>`}
+  <h1>${esc(moveText(p, L))}</h1>
+  <p class="who-line">Brave Try: a ${STAGES[p.cr[id].lv + 1]} move</p>${p.quiet && L.quiet ? '' : `<p class="cue">${esc(L.c)}</p>`}
   <p class="target">Try it once: ${targetText(L, L.r[0])}</p>
   <p class="cue">Just one try. It doesn't matter if it doesn't work yet. Trying is the brave bit.</p>
   <div class="answers"><button class="sign a1" data-act="braveDone" data-ok="1">I did it!</button>
@@ -578,7 +599,7 @@ VIEWS.firsts = () => {
 VIEWS.wiggle = () => `<section class="post"><span class="crest">${art('cub', 2, 96)}</span><h1>Wiggle Break</h1>
   <p class="cue">4 moves, 30 seconds each. No scores, just fun.</p>
   <button class="sign" data-act="wiggleGo">Start wiggling ${icon('arrow', 26)}</button></section>${backBtn('home')}`;
-VIEWS.wiggling = () => `<section class="post"><span class="crest">${art('cub', 2, 96)}</span><p class="who-line">Move ${arg.i + 1} of 4</p><h1>${esc(arg.list[arg.i])}</h1>
+VIEWS.wiggling = () => `<section class="post"><span class="crest">${art('cub', 2, 96)}</span><h1>${esc(arg.list[arg.i])}</h1><p class="who-line">Move ${arg.i + 1} of 4</p>
   <p class="count" id="wigCount">30</p><button class="tool" data-act="go" data-v="home">${icon('stop', 20)} Stop</button></section>`;
 
 /* Teach a grown-up */
@@ -592,7 +613,7 @@ VIEWS.teach = () => {
 };
 VIEWS.teach2 = () => {
   const p = me(); const L = ladder(p, arg)[0];
-  return `<section class="post"><span class="crest">${art(arg, p.cr[arg].lv, 96)}</span><p class="who-line">Coach mode</p><h1>Teach: ${esc(moveText(p, L))}</h1>
+  return `<section class="post"><span class="crest">${art(arg, p.cr[arg].lv, 96)}</span><h1>Teach your grown-up: ${esc(moveText(p, L))}</h1>
   <ol class="cue steps" style="text-align:left"><li>Show your grown-up how to do it.</li><li>Tell them the tip: <i>${esc(L.c)}</i></li><li>Watch them do it 3 times.</li><li>Give them stars!</li></ol></section>
   <h2 class="center">How did your grown-up do?</h2>
   <div class="faces">${[1, 2, 3].map((n) => `<button class="face" data-act="coach" data-n="${n}">${starsSvg(n)}${['Keep practising', 'Pretty good', 'Super'][n - 1]}</button>`).join('')}</div>`;
